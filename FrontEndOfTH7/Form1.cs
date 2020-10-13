@@ -47,7 +47,7 @@ namespace FrontEndOfTH7
         {
 
         }
-        private void getdata()
+        private List<SanPham> getdata()
         {
             List<SanPham> product = null;
             using (var client = new HttpClient())
@@ -64,10 +64,23 @@ namespace FrontEndOfTH7
                 }
                 else product = null;
             }
-            foreach(var item in product)
+            return product;
+        }
+
+        private void QLSP_Load(object sender, EventArgs e)
+        {
+            var data = getdata().ToArray();
+            
+            foreach (var item in data)
             {
-                
-            }
+               
+                dataGridView1.Rows.Add(item.Ma,item.Ten,item.DonGia,item.MaDanhMuc);
+                    }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
