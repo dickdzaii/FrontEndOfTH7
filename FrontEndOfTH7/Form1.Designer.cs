@@ -54,6 +54,10 @@
             this.Ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,6 +142,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 8;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -145,6 +150,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 9;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
             // 
@@ -152,6 +158,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 10;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox4
             // 
@@ -159,6 +166,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(225, 20);
             this.textBox4.TabIndex = 11;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // textBox5
             // 
@@ -166,6 +174,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(225, 20);
             this.textBox5.TabIndex = 12;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox6
             // 
@@ -173,6 +182,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 20);
             this.textBox6.TabIndex = 13;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // textBox8
             // 
@@ -180,6 +190,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(100, 20);
             this.textBox8.TabIndex = 15;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // textBox9
             // 
@@ -187,6 +198,7 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(225, 20);
             this.textBox9.TabIndex = 16;
+            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // button1
             // 
@@ -196,6 +208,7 @@
             this.button1.TabIndex = 17;
             this.button1.Text = "Tìm";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -205,6 +218,7 @@
             this.button2.TabIndex = 18;
             this.button2.Text = "Tìm";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -214,6 +228,7 @@
             this.button3.TabIndex = 19;
             this.button3.Text = "Tìm";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -223,6 +238,7 @@
             this.button4.TabIndex = 20;
             this.button4.Text = "Tìm";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // comboBox1
             // 
@@ -245,6 +261,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(443, 141);
             this.dataGridView1.TabIndex = 22;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Ma
@@ -267,11 +284,54 @@
             this.MaLoai.HeaderText = "Mã Loại";
             this.MaLoai.Name = "MaLoai";
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(105, 244);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 23;
+            this.button5.Text = "Thêm";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(221, 243);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 24;
+            this.button6.Text = "Sửa";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(320, 243);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 25;
+            this.button7.Text = "Xoá";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(420, 244);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 26;
+            this.button8.Text = "Reload";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // QLSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(542, 473);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button4);
@@ -331,6 +391,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Ten;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaBan;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLoai;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }
 
